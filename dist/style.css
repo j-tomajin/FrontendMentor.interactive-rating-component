@@ -76,7 +76,7 @@ a::active {
 main {
   background-color: var(--card-background-clr);
   padding: 1.875rem;
-  border-radius: 2rem;
+  border-radius: 0.75rem;
   width: min(100%, 23.125rem);
   height: 23.75rem;
   margin-bottom: 1.25rem;
@@ -176,7 +176,7 @@ article .submit:hover {
 .article-bottom {
   background-color: var(--card-background-clr);
   padding: 1.875rem;
-  border-radius: 2rem;
+  border-radius: 0.75rem;
   width: min(100%, 23.125rem);
   height: 23.75rem;
   margin-bottom: 1.25rem;
@@ -219,6 +219,7 @@ article .submit:hover {
   50% {
     -webkit-clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
             clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
+    opacity: 0.1;
   }
   75% {
     -webkit-clip-path: polygon(40% 0, 90% 0, 60% 100%, 10% 100%);
@@ -236,6 +237,7 @@ article .submit:hover {
   50% {
     -webkit-clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
             clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
+    opacity: 0.1;
   }
   75% {
     -webkit-clip-path: polygon(40% 0, 90% 0, 60% 100%, 10% 100%);
