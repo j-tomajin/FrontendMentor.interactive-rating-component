@@ -76,7 +76,7 @@ a::active {
 main {
   background-color: var(--card-background-clr);
   padding: 1.875rem;
-  border-radius: 0.75rem;
+  border-radius: 2rem;
   width: min(100%, 23.125rem);
   height: 23.75rem;
   margin-bottom: 1.25rem;
@@ -176,7 +176,7 @@ article .submit:hover {
 .article-bottom {
   background-color: var(--card-background-clr);
   padding: 1.875rem;
-  border-radius: 0.75rem;
+  border-radius: 2rem;
   width: min(100%, 23.125rem);
   height: 23.75rem;
   margin-bottom: 1.25rem;
