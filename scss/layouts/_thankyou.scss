@@ -1,0 +1,63 @@
+@use '../utils/functions' as f;
+
+.article-bottom{
+    background-color: var(--card-background-clr);
+    padding: f.rem(30);
+    border-radius: f.rem(12);
+    width: min(100%, f.rem(370));
+    height: f.rem(380);
+    margin-bottom: f.rem(20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 2s ease,
+                opacity 2s ease;
+
+    .img{
+        margin-bottom: f.rem(16);
+    }
+
+    .rate-selected{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--rating-text-clr);
+        background-color: var(--rating-background-clr);
+        margin-bottom: f.rem(20);
+        padding: f.rem(8) f.rem(10);
+        border-radius: f.rem(50);
+
+        .total-rate{
+            font-weight: 400;
+        }
+    }
+
+    h2{
+        margin-bottom: f.rem(16);
+    }
+
+    .p{
+        text-align: center;
+        font-weight: 400;
+        color: var(--sub-text-clr);
+    }
+}
+
+@keyframes bottomAnimation{
+    50%{
+        clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
+    }
+    75%{
+        clip-path: polygon(40% 0, 90% 0, 60% 100%, 10% 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        transform: scale(1);
+    }
+}

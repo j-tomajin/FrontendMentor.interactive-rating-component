@@ -1,0 +1,9 @@
+@use '../utils/functions' as f;
+
+.attribution { 
+    font-size: f.rem(14); 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--link-clr); 
+}

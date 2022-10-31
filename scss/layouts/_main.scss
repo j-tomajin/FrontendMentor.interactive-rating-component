@@ -1,0 +1,97 @@
+@use '../utils/functions' as f;
+
+main{
+    background-color: var(--card-background-clr);
+    padding: f.rem(30);
+    border-radius: f.rem(12);
+    width: min(100%, f.rem(370));
+    height: f.rem(380);
+    margin-bottom: f.rem(20);
+}
+
+article{
+    .star-img{
+        background-color: var(--star-clr);
+        padding: f.rem(12);
+        border-radius: 50%;
+        margin-bottom: f.rem(16);
+    }
+
+    .rating-state{
+        h1{
+            font-weight: 700;
+            color: var(--head-text-clr);
+        }
+
+        p{
+            color: var(--sub-text-clr);
+            margin-bottom: f.rem(30);
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: f.rem(16);
+
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: f.rem(45);
+                width: f.rem(45);
+                font-size: bold;
+                margin-bottom: f.rem(16);
+                background: var(--number-btn-clr);
+                color: var(--number-text-clr);
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 300ms ease-in-out,
+                            color 300ms ease-in-out;
+
+                &:hover{
+                background: var(--hover-clr);
+                color: var(--hover-text-clr);
+                }
+                
+            }
+            .active{
+                background: var(--active-clr);
+                color: var(--active-text-clr);
+            }
+        }
+    }
+
+    .submit{
+        width: 100%;
+        padding: f.rem(14) 0;
+        border-radius: f.rem(50);
+        text-transform: uppercase;
+        letter-spacing: f.rem(2);
+        font-weight: bold;
+        background-color: var(--btn-clr);
+        color: var(--btn-text-clr);
+        transition: background 300ms ease-in-out,
+                    color 300ms ease-in-out;
+
+        &:hover{
+            background-color: var(--btn-hover-clr);
+            color: var(--btn-hover-text-clr);
+        }
+    }
+}
+
+@keyframes animationMain {
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    50%{
+        clip-path: polygon(40% 0, 90% 0, 60% 100%, 10% 100%);
+        // transform: scale(0);
+    }
+    100%{
+        clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
+        opacity: 0;
+        transform: scale(.8);
+    }
+}

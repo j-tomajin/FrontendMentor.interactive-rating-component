@@ -1,0 +1,37 @@
+@use '../utils/functions' as f;
+@use '../utils/fonts' as font;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: font.$overpass;
+    background-color: var(--background-clr);
+    color: var(--text-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
