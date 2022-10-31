@@ -51,6 +51,7 @@
 @keyframes bottomAnimation{
     50%{
         clip-path: polygon(60% 0, 60% 0, 25% 100%, 25% 100%);
+        opacity: .1;
     }
     75%{
         clip-path: polygon(40% 0, 90% 0, 60% 100%, 10% 100%);
