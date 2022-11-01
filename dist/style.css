@@ -96,32 +96,32 @@ article .rating-state p {
   color: var(--sub-text-clr);
   margin-bottom: 1.875rem;
 }
-article .rating-state ul {
+article .rating-state form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.875rem;
 }
-article .rating-state ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.8125rem;
-  width: 2.8125rem;
-  font-size: bold;
-  margin-bottom: 1rem;
-  background: var(--number-btn-clr);
+article .rating-state form .input__radio {
+  display: none;
+}
+article .rating-state form .input__label {
+  display: grid;
+  place-content: center;
+  background-color: var(--number-btn-clr);
   color: var(--number-text-clr);
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background-color 1s ease, color 1s ease;
 }
-article .rating-state ul li:hover {
-  background: var(--hover-clr);
+article .rating-state form .input__label:hover {
+  background-color: var(--hover-clr);
   color: var(--hover-text-clr);
 }
-article .rating-state ul .active {
-  background: var(--active-clr);
+article .rating-state form .input__radio:checked + .input__label {
+  background-color: var(--active-clr);
   color: var(--active-text-clr);
 }
 article .submit {
