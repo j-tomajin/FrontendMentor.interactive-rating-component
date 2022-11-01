@@ -28,38 +28,40 @@ article{
             margin-bottom: f.rem(30);
         }
 
-        ul{
+        form {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: f.rem(16);
+            margin-bottom: f.rem(30);
 
-            li{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: f.rem(45);
-                width: f.rem(45);
-                font-size: bold;
-                margin-bottom: f.rem(16);
-                background: var(--number-btn-clr);
-                color: var(--number-text-clr);
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background 300ms ease-in-out,
-                            color 300ms ease-in-out;
-
-                &:hover{
-                background: var(--hover-clr);
-                color: var(--hover-text-clr);
-                }
-                
+            .input__radio {
+                display: none;
             }
-            .active{
-                background: var(--active-clr);
+
+            .input__label {
+                display: grid;
+                place-content: center;
+                background-color: var(--number-btn-clr);
+                color: var(--number-text-clr);
+                width: f.rem(50);
+                height: f.rem(50);
+                border-radius: 50%;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 1s ease,
+                            color 1s ease;
+
+                &:hover {
+                    background-color: var(--hover-clr);
+                    color: var(--hover-text-clr);
+                }
+            }
+
+            .input__radio:checked + .input__label{
+                background-color: var(--active-clr);
                 color: var(--active-text-clr);
             }
         }
+
     }
 
     .submit{
