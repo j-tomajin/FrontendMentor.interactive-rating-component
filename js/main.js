@@ -1,16 +1,12 @@
-const list = document.querySelector('ul').querySelectorAll('li');
+const label = document.querySelector('form').querySelectorAll('label');
 const submitBtn = document.querySelector('.submit');
 const main = document.querySelector('main');
 const bottomArticle = document.querySelector('.article-bottom');
 let rate = document.querySelector('.rate');
 
-list.forEach(element => {
+label.forEach(element => {
     element.addEventListener('click', function(){
-        list.forEach(ul=>ul.classList.remove('active'));
-
-        this.classList.add('active');
-        // console.log(this);
-        rate.innerHTML = this.innerHTML;
+        label.forEach(rate.innerHTML = this.innerHTML);
     })
 });
 
